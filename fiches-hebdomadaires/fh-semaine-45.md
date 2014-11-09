@@ -5,14 +5,14 @@
 
 Temps de travail de Florent Guillemot : 10h
 
-Temps de travail de Gwenn Meynier : h m
+Temps de travail de Gwenn Meynier : 8h
 
 __Travail effectué.__
 
 * comparatif des méthodes de création d'extension Python à partir de code C++;
 * ajout de biblatex dans le document latex;
 * ajout de la coloration du code dans le rapport Latex;
-* écriture du planning prévisionnel avec un gantt latex.
+* réalisation du planning prévisionnel avec un gantt latex.
 
 __Travail non effectué.__
 

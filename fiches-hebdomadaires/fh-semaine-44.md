@@ -5,11 +5,11 @@
 
 Temps de travail de Florent Guillemot : 8h
 
-Temps de travail de Gwenn Meynier : h m
+Temps de travail de Gwenn Meynier : 6h
 
 __Travail effectué.__
 
-* résumé des articles trouvés.
+* réalisation des fiches de lecture des articles trouvés.
 
 __Travail non effectué.__
 

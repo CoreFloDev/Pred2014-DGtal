@@ -1,11 +1,11 @@
 *****
 # Fiche de suivi hebdomadaire
-# du 6 novembre 2014 au 12 novembre 2014
+# du 6 décembre 2014 au 12 décembre 2014
 *****
 
-Temps de travail de Florent Guillemot : h m
+Temps de travail de Florent Guillemot : h
 
-Temps de travail de Gwenn Meynier : h m
+Temps de travail de Gwenn Meynier : h
 
 __Travail effectué.__
 

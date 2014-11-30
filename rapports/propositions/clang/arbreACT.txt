@@ -1,0 +1,31 @@
+TRANSLATION_UNIT ../boostpython/myexample.h
+  +--CLASS_TEMPLATE HelloWorld
+     +--TEMPLATE_TYPE_PARAMETER T
+     +--CXX_ACCESS_SPEC_DECL 
+     +--CXX_METHOD sayHello
+     |  +--COMPOUND_STMT 
+     |     +--CALL_EXPR operator<<
+     |        +--CALL_EXPR operator<<
+     |        |  +--DECL_REF_EXPR cout
+     |        |  |  +--NAMESPACE_REF std
+     |        |  +--UNEXPOSED_EXPR operator<<
+     |        |  |  +--DECL_REF_EXPR operator<<
+     |        |  +--UNEXPOSED_EXPR 
+     |        |     +--STRING_LITERAL "Hello world"
+     |        +--UNEXPOSED_EXPR operator<<
+     |        |  +--DECL_REF_EXPR operator<<
+     |        +--UNEXPOSED_EXPR endl
+     |           +--DECL_REF_EXPR endl
+     |              +--NAMESPACE_REF std
+     +--CXX_METHOD multiply
+        +--TYPE_REF T
+        +--PARM_DECL x
+        |  +--TYPE_REF T
+        +--PARM_DECL y
+        |  +--TYPE_REF T
+        +--COMPOUND_STMT 
+           +--RETURN_STMT 
+              +--BINARY_OPERATOR 
+                 +--DECL_REF_EXPR x
+                 +--DECL_REF_EXPR y
+

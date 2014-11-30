@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# compilation de la librairie
+g++ -g -Wall -shared -fPIC myexample.cpp -o myexample.so
+
+# exécution du test
+python test.py

@@ -11,7 +11,7 @@ __Travail effectué.__
 
 * Préparation de la soutenance ;
 * Passage de la soutenance ;
-* Validation de la proposition avec la commanditaire.
+* Validation de la proposition avec le commanditaire.
 
 __Travail non effectué.__
 

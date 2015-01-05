@@ -1,65 +1,65 @@
 %=============================================================================
-% Classe report-rd-info (basée sur la classe standard ``report'').
-% Rapport de travail de recherche et développement du département d'informatique de Polytech Nantes
-% Auteur : José Martinez
+% Classe report-rd-info (basï¿½e sur la classe standard ``report'').
+% Rapport de travail de recherche et dï¿½veloppement du dï¿½partement d'informatique de Polytech Nantes
+% Auteur : Josï¿½ Martinez
 %=============================================================================
 \def\REPORT@RD@INFO@Version{2.6}
 % 1.0
 % - version initiale
 % 1.1
-% - nouveaux en-têtes de chapitres
+% - nouveaux en-tï¿½tes de chapitres
 % - prise en compte de deux auteurs
-% - correction de la largeur du résumé dans la version << écran >> du rapport
+% - correction de la largeur du rï¿½sumï¿½ dans la version << ï¿½cran >> du rapport
 % - ajout des fiches de suivi
 % 2.0
 % - protection des identifiants internes avec des << @ >>
-% - ajout du tableau récapitulatif du temps consacré au projet
-% - traduction en anglais des parties du document auto-générées
+% - ajout du tableau rï¿½capitulatif du temps consacrï¿½ au projet
+% - traduction en anglais des parties du document auto-gï¿½nï¿½rï¿½es
 % 2.1
-% - conditionnelle \ifscreen renommée pour être rendue accessible dans la rédaction
+% - conditionnelle \ifscreen renommï¿½e pour ï¿½tre rendue accessible dans la rï¿½daction
 %   d'un document (par exemple, pour choisir l'orientation des figures)
-% - ajout d'un avertissement en verso de première de couverture
+% - ajout d'un avertissement en verso de premiï¿½re de couverture
 % 2.2
-% - prise en compte de deux encadrants (les rares suivants sont à ajouter << manuellement >>)
+% - prise en compte de deux encadrants (les rares suivants sont ï¿½ ajouter << manuellement >>)
 % - modification de la mise en page de la page de titre
 % 2.3
-% - couverture sur une seule page pour la version << écran >>
-% - correction d'une bogue lors du passage à une seule page de titre pour
-%   la version << écran >>
+% - couverture sur une seule page pour la version << ï¿½cran >>
+% - correction d'une bogue lors du passage ï¿½ une seule page de titre pour
+%   la version << ï¿½cran >>
 % 2.4
-% - prise en compte d'UTF-8 (et autres codages) pour les textes générés par cette classe
-% - suppression des tirets longs lorsque l'équipe est absente
+% - prise en compte d'UTF-8 (et autres codages) pour les textes gï¿½nï¿½rï¿½s par cette classe
+% - suppression des tirets longs lorsque l'ï¿½quipe est absente
 % - traduction en anglais de l'avertissement sur le << copyright >>
-% - ajout de la dernière ligne verticale dans le tableau des heures lorsqu'il y a un
-%   seul élève ingénieur
+% - ajout de la derniï¿½re ligne verticale dans le tableau des heures lorsqu'il y a un
+%   seul ï¿½lï¿½ve ingï¿½nieur
 % - remplacements de sauts fixes par des ressorts dans la page de titre
-% - possibilité de décrire un partenaire hors laboratoires Polytech et d'y associer son logo
-% - indications supplémentaires dans le modèle de rapport
+% - possibilitï¿½ de dï¿½crire un partenaire hors laboratoires Polytech et d'y associer son logo
+% - indications supplï¿½mentaires dans le modï¿½le de rapport
 % - ajout de cet historique des modifications
 % 2.5
-% - modification des marges sur la version écran pour éviter de (trop) écraser le logo Polytech
+% - modification des marges sur la version ï¿½cran pour ï¿½viter de (trop) ï¿½craser le logo Polytech
 % - modification de la couleur des chapitres pour celle de Polytech Nantes
 % 2.6
-% - logo Polytech vertical en version écran sur la page de garde
-% - suppression de l'espacement avant un titre de chapitre et entre le numéro et le titre dans la version écran, ainsi que réduction de l'espacement avant le texte
+% - logo Polytech vertical en version ï¿½cran sur la page de garde
+% - suppression de l'espacement avant un titre de chapitre et entre le numï¿½ro et le titre dans la version ï¿½cran, ainsi que rï¿½duction de l'espacement avant le texte
 % - macro \ifenglish rendue visible pour changer le titre de la liste des algorithmes dans le document principal
-% - chapitres étoilés mis en forme de manière similaire au chapitres (couleur des caractère et espacements)
+% - chapitres ï¿½toilï¿½s mis en forme de maniï¿½re similaire au chapitres (couleur des caractï¿½re et espacements)
 % - modification du style des parties en phase avec celui des chapitres.
 % - ajout du coordinateur
 % - refonte du code
-% - modèle de rapport en version anglaise, bien plus court
-% - suppression de "version X.Y du " dans le modèle car plusieurs élèves le répétaient sans suivre la consigne de ne pas le faire !...
-% - référence en lignes de la bibliographie mises en notes de bas de page
+% - modï¿½le de rapport en version anglaise, bien plus court
+% - suppression de "version X.Y du " dans le modï¿½le car plusieurs ï¿½lï¿½ves le rï¿½pï¿½taient sans suivre la consigne de ne pas le faire !...
+% - rï¿½fï¿½rence en lignes de la bibliographie mises en notes de bas de page
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{report-rd-info}[2013/07/16 report-rd-info version \REPORT@RD@INFO@Version]
 \typeout{(c) 2008-2013 Jos\'e Martinez, \'Ecole polytechnique de l'universit\'e de Nantes}
 \typeout{ }
 
 %>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Gestion des options =
-% Déclaration des options possibles
+% Dï¿½claration des options possibles
 \newif\ifenglish
 \DeclareOption{english}{\englishtrue}
-\DeclareOption{francais}{\englishfalse}
+\DeclareOption{french}{\englishfalse}
 
 \newif\if@inDraftMode
 \DeclareOption{draft}{\@inDraftModetrue}
@@ -73,7 +73,7 @@
 \screenfalse
 \DeclareOption{screen}{\screentrue}
 
-\ExecuteOptions{francais,final,11pt}
+\ExecuteOptions{french,final,11pt}
 \ProcessOptions\relax
 
 %<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Fin gestion des options =
@@ -95,10 +95,10 @@
 \fi
 \LoadClass{report}
 
-% Attention : ne pas déplacer l'appel pour charger 'color'
+% Attention : ne pas dï¿½placer l'appel pour charger 'color'
 \RequirePackage{color}
-%\definecolor{ch@ptercolor}{rgb}{0.85,0.0,0.0} % première version : rouge
-%\definecolor{ch@ptercolor}{rgb}{0.035,0.259,0.439}% bleu foncé du logo Polytech
+%\definecolor{ch@ptercolor}{rgb}{0.85,0.0,0.0} % premiï¿½re version : rouge
+%\definecolor{ch@ptercolor}{rgb}{0.035,0.259,0.439}% bleu foncï¿½ du logo Polytech
 \definecolor{ch@ptercolor}{rgb}{0,0.678,0.937}% bleu clair du logo Polytech
 \definecolor{r@tiomaxcolor}{rgb}{0.5,0.5,0.5}
 \RequirePackage{graphicx}
@@ -117,7 +117,7 @@
                 citecolor=blue,%
                 linkcolor=blue,%
                 hyperfigures,%
-                pagebackref,%
+                % pagebackref,%
                 pdfcreator=LaTeX,%
                 breaklinks=true,%
                 pdfpagelayout=SinglePage,%
@@ -131,7 +131,7 @@
 }
 \else
 \AtBeginDocument{%
-  \selectlanguage{francais}
+  \selectlanguage{french}
 }
 \fi
 
@@ -381,7 +381,7 @@
    \fi}
 
 %%%%%%%
-% Thème
+% Thï¿½me
 %
 
 \global\let\@theme\@empty
@@ -449,7 +449,7 @@
    }
 
 \newcommand{\maketitleheading}
-   {% En-tête
+   {% En-tï¿½te
    {%
    \maketitlelarge
    \textsc{\rapportname}
@@ -620,7 +620,7 @@
    }
 
 \newcommand{\maketitlecontents}
-   {% Mise en page générale
+   {% Mise en page gï¿½nï¿½rale
    \centering
 
    \maketitleheading
@@ -672,7 +672,7 @@
       \end{titlepage}
    \fi
 
-	%% Deuxième page : texte sur les droits d'auteur
+	%% Deuxiï¿½me page : texte sur les droits d'auteur
 
 	\thispagestyle{empty}
 
@@ -695,8 +695,8 @@
    \fi
 
 	\clearpage
-  % Troisième page : rappel de titre + auteurs + résumé
-  %                  + classification + mots-clés
+  % Troisiï¿½me page : rappel de titre + auteurs + rï¿½sumï¿½
+  %                  + classification + mots-clï¿½s
    \begin{center}
       {%
       \huge
@@ -745,9 +745,9 @@
 %  \cfoot[]{}
 } % \maketitle
 
-%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Quatrième de couverture =
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Quatriï¿½me de couverture =
 
-%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Fin quatrième de couverture =
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Fin quatriï¿½me de couverture =
 
 \newsavebox{\@abstractBox}
 \newbox{\@abstractBoxGlobal}
@@ -760,7 +760,7 @@
     }{\end{minipage}\end{lrbox}%
     \global\setbox\@abstractBoxGlobal=\vbox{\copy\@abstractBox}}
 
-% Catégories ACM
+% Catï¿½gories ACM
 \newsavebox{\@classificationBox}
 \newbox{\@classificationBoxGlobal}
 \newenvironment{classification}{%
@@ -850,7 +850,7 @@
       \vskip 40\p@
    \fi}}
 
-% Redefinition de l'en-tete d'un chapitre étoilé
+% Redefinition de l'en-tete d'un chapitre ï¿½toilï¿½
 \def\@makeschapterhead#1{%
    \ifscreen
       \relax

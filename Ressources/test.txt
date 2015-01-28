@@ -1,0 +1,3 @@
+DGtal/arithmetic/LighterSternBrocot.h
+DGtal/arithmetic/IntegerComputer.h
+DGtal/arithmetic/LatticePolytope2D.h

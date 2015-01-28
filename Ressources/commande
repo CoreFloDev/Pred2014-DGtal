@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Compilation
+swig3.0 -c++ -python dgtal.i
+g++ -O2 -fPIC -c dgtal.cxx -I/usr/include/python2.7
+#g++ -shared myexample_wrap.o -o _myexample.so
+
+# exécution de l'exemple
+#python test.py

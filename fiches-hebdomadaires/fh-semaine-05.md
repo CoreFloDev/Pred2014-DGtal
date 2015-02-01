@@ -19,11 +19,11 @@ __Travail non effectué.__
 __Échanges avec le commanditaire.__
 
 * Réunion avec Nicolas Normand le 28 janvier ;
-* Réunion planifié pour la semaine prochaine.
+* Réunion planifiée pour la semaine prochaine.
 
 __Planification pour la semaine prochaine.__
 
 * Prototype fonctionnel ;
 * Rapport final ;
-* Mise à jour du Gant ;
+* Mise à jour du Gantt ;
 * Documentation de l'instalation des scripts.

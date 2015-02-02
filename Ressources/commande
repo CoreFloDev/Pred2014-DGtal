@@ -1,9 +1,18 @@
 #!/bin/bash
 
 # Compilation
-swig3.0 -c++ -python dgtal.i
-g++ -O2 -fPIC -c dgtal.cxx -I/usr/include/python2.7
-#g++ -shared myexample_wrap.o -o _myexample.so
+
+rm dgtal_wrap.cxx
+rm *.so
+rm *.o
+
+swig3.0 -c++ -python -Wall dgtal.i
+g++ -O2 -fPIC -c dgtal_wrap.cxx -I/usr/include/python2.7 -I/home/florent/projet/DGtal/src/ -I/home/florent/projet/DGtal/build/src/
+g++ -O2 -fPIC -c ../../DGtal/src/DGtal/kernel/NumberTraits.cpp -I/home/florent/projet/DGtal/src/ -I/home/florent/projet/DGtal/build/src/
+g++ -O2 -fPIC -c ../../DGtal/src/DGtal/arithmetic/LighterSternBrocot.cpp -I/home/florent/projet/DGtal/src/ -I/home/florent/projet/DGtal/build/src/
+g++ -O2 -fPIC -c ../../DGtal/src/DGtal/base/Common.cpp -I/home/florent/projet/DGtal/src/ -I/home/florent/projet/DGtal/build/src/
+
+g++ -shared Common.o LighterSternBrocot.o NumberTraits.o dgtal_wrap.o -o _dgtal.so
 
 # exécution de l'exemple
-#python test.py
+python test.py

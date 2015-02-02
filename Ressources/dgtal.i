@@ -1,12 +1,16 @@
-
 %module dgtal
 
 %{
+
 #include "/home/florent/projet/DGtal/src/DGtal/arithmetic/LighterSternBrocot.h"
-#include "/home/florent/projet/DGtal/src/DGtal/base/StdRebinders.h"
+
+using namespace DGtal;
 %}
 
-%include "/home/florent/projet/DGtal/src/DGtal/arithmetic/LighterSternBrocot.h"
-%include "/home/florent/projet/DGtal/src/DGtal/base/StdRebinders.h"
 
-%template (LighterSternBrocoti64i64MapRebinder) LighterSternBrocot<DGTal::int64_t,DGTal::int64_t,StdMapRebinder>;
+%include "/home/florent/projet/DGtal/src/DGtal/base/BasicTypes.h"
+%include "/home/florent/projet/DGtal/src/DGtal/arithmetic/LighterSternBrocot.h"
+
+%template (LightSternBrocot) DGtal::LighterSternBrocot<DGtal::int64_t,DGtal::int64_t>;
+%rename (Fraction) LightSternBrocot::Fraction;
+%rename (Node) LightSternBrocot::Node;

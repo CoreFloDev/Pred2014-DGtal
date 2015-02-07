@@ -4,12 +4,12 @@
 dgtalPath=/home/florent/projet/DGtal
 
 # Suppression des fichier inutiles
-rm dgtal_wrap.cxx
+#rm dgtal_wrap.cxx
 rm *.so
 rm *.o
 
 # compilation
-swig3.0 -c++ -python -Wall dgtal.i
+#swig3.0 -c++ -python -Wall -D_SWIG dgtal.i
 g++ -O2 -fPIC -c dgtal_wrap.cxx -I/usr/include/python2.7 -I$dgtalPath/src/ -I$dgtalPath/build/src/
 g++ -O2 -fPIC -c $dgtalPath/src/DGtal/kernel/NumberTraits.cpp -I$dgtalPath/src/ -I$dgtalPath/build/src/
 g++ -O2 -fPIC -c $dgtalPath/src/DGtal/arithmetic/LighterSternBrocot.cpp -I$dgtalPath/src/ -I$dgtalPath/build/src/

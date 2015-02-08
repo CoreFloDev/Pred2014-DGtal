@@ -9,8 +9,8 @@ Temps de travail de Gwenn Meynier : 18h
 
 __Travail effectué.__
 
-* Compilation d'un bibliothèque composée de classes de DGtal utilisable en python
-* Rédaction du rapport de projet
+* Compilation d'une bibliothèque composée de classes de DGtal utilisable en Python ;
+* Rédaction du rapport de projet.
 
 __Travail non effectué.__
 
@@ -22,4 +22,4 @@ __Échanges avec le commanditaire.__
 
 __Planification pour la semaine prochaine.__
 
-* Passage de la soutenance
+* Passage de la soutenance.
